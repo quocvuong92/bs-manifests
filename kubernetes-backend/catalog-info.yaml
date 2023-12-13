@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-test-kubernetes
+  description: This is a test component kubernetes
+  tags:
+    - go
+  annotations:
+    'backstage.io/kubernetes-label-selector': app.kubernetes.io/part-of=argocd
+    'argocd/app-selector': argocd.argoproj.io/instance=app-of-addons
+spec:
+  type: service
+  lifecycle: test
+  owner: user:guest
